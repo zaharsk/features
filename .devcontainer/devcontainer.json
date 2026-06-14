@@ -35,6 +35,7 @@
         "[shellscript]": {
           "editor.defaultFormatter": "lumirelle.shell-format-rev"
         },
+        "shellformat.path": "/home/vscode/.local/bin/shfmt",
         "[toml]": {
           "editor.defaultFormatter": "tamasfe.even-better-toml"
         },
