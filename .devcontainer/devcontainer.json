@@ -1,0 +1,57 @@
+{
+  "name": "Devcontainer",
+
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  "initializeCommand": ".devcontainer/initialize-command.sh",
+  "postCreateCommand": ".devcontainer/post-create-command.sh",
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "chat.disableAIFeatures": true,
+        "telemetry.telemetryLevel": "off",
+        "workbench.startupEditor": "none",
+
+        "git.alwaysSignOff": true,
+        "git.autofetch": true,
+        "git.confirmSync": false,
+
+        "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+        "terminal.integrated.initialHint": false,
+
+        "editor.fontFamily": "JetBrainsMono Nerd Font Propo",
+        "editor.fontSize": 12,
+        "editor.fontLigatures": true,
+
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+        "[shellscript]": {
+          "editor.defaultFormatter": "lumirelle.shell-format-rev"
+        },
+        "shellformat.path": "/home/vscode/.local/bin/shfmt",
+        "[toml]": {
+          "editor.defaultFormatter": "tamasfe.even-better-toml"
+        },
+        "[yaml]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        }
+        // --- --- --- //
+      },
+
+      "extensions": [
+        "barnim.markdown-code-copy-button",
+        "esbenp.prettier-vscode",
+        "lumirelle.shell-format-rev",
+        "irongeek.vscode-env",
+        "redhat.vscode-yaml",
+        "tamasfe.even-better-toml"
+        // --- --- --- //
+      ]
+    }
+  },
+
+  "runArgs": ["--env-file", ".devcontainer/.env"]
+}
