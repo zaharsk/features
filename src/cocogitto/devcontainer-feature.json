@@ -1,0 +1,27 @@
+{
+  "name": "The conventional commit toolbox",
+  "id": "cocogitto",
+  "version": "0.0.0",
+  "description": "This feature install [cocogitto](https://docs.cocogitto.io/)",
+  "containerEnv": {},
+  "options": {
+    "version": {
+      "type": "string",
+      "default": "latest",
+      "proposals": ["latest"],
+      "description": "Cocogitto version"
+    },
+    "completions": {
+      "type": "string",
+      "default": "bash",
+      "proposals": ["none", "bash", "fish", "zsh"],
+      "description": "Enable installing completions"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": []
+    }
+  }
+}

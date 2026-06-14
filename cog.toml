@@ -1,0 +1,37 @@
+from_latest_tag = false
+ignore_merge_commits = true
+ignore_fixup_commits = false
+disable_changelog = false
+disable_bump_commit = false
+generate_mono_repository_global_tag = true
+generate_mono_repository_package_tags = true
+branch_whitelist = []
+pre = "alpha.*"
+skip_ci = "[skip ci]"
+skip_untracked = false
+pre_bump_hooks = []
+post_bump_hooks = []
+pre_package_bump_hooks = []
+
+post_package_bump_hooks = [
+    "~/features-scripts/update-version-file.sh {{package}} {{version}} devcontainer-feature.json"
+]
+
+[git_hooks]
+
+[commit_types]
+
+[bump_profiles]
+
+[monorepo.packages.cocogitto]
+path = "src/cocogitto"
+
+[changelog]
+template = "monorepo_remote"
+package_template = "package_remote"
+remote = "github.com"
+repository = "features"
+owner = "zaharsk"
+authors = [
+    { signature = "Zakhar Skorokhodov", username = "zaharsk" },
+]
